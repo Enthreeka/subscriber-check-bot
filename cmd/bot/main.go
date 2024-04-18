@@ -19,7 +19,7 @@ func main() {
 
 	cfg, err := config.New()
 	if err != nil {
-		log.Fatal("failed load config: %v", err)
+		log.Fatal("Failed load config: %v", err)
 	}
 
 	bot, err := tgbotapi.NewBotAPI(cfg.Telegram.Token)
