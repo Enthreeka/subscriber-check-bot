@@ -12,7 +12,8 @@ services:
     ports:
       - "5435:5432"
     volumes:
-      - ./migration:/docker-entrypoint-initdb.d
+      - ./migration/up:/docker-entrypoint-initdb.d
+      - postgres_data:/var/lib/postgresql/data
     environment:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
