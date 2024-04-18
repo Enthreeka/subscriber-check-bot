@@ -18,7 +18,7 @@ type ViewHandler struct {
 
 func (v *ViewHandler) GetStart() ViewFunc {
 	return func(ctx context.Context, bot *tgbotapi.BotAPI, update *tgbotapi.Update) error {
-		text := "Ну что, поехали?"
+		text := "Приветствуем Вас в нашем боте! Вам необходимо подписаться на все каналы, для получения доступа к основному каналу."
 
 		msg := tgbotapi.NewMessage(update.Message.Chat.ID, text)
 		msg.ReplyMarkup = tgbotapi.NewInlineKeyboardMarkup(

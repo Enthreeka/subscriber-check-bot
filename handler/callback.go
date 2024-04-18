@@ -81,7 +81,7 @@ func (c *CallbackHandler) SecondStep() ViewFunc {
 			return err
 		}
 
-		textSec := "Говорю - готово"
+		textSec := "После подписки на все каналы нажмите на кнопку - ГОТОВО"
 		msgSec := tgbotapi.NewMessage(update.CallbackQuery.Message.Chat.ID, textSec)
 		msgSec.ReplyMarkup = tgbotapi.NewInlineKeyboardMarkup(
 			tgbotapi.NewInlineKeyboardRow(
@@ -119,7 +119,7 @@ func (c *CallbackHandler) Ready() ViewFunc {
 		}
 
 		if !isMember {
-			textThird := "Хуево стараешься"
+			textThird := "Пожалуйста, подпишитесь на все представленные каналы"
 			msgSec := tgbotapi.NewMessage(update.CallbackQuery.Message.Chat.ID, textThird)
 
 			if _, err := bot.Send(msgSec); err != nil {
