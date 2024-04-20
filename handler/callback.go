@@ -72,7 +72,7 @@ func (c *CallbackHandler) SecondStep() ViewFunc {
 			return nil
 		}
 
-		text := "Давай гандон подписывайся на каналы"
+		text := "Пожалуйста, подпишитесь на каналы"
 		msg := tgbotapi.NewEditMessageText(update.CallbackQuery.Message.Chat.ID, update.CallbackQuery.Message.MessageID, text)
 		msg.ReplyMarkup = markup
 
